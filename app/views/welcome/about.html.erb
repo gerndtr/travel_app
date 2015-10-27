@@ -1,0 +1,21 @@
+
+<style>
+    body {
+        background: <%= @color %>;
+    }
+</style>
+
+<%= link_to "Red", about_path(color: "red"), class: "btn btn-danger" %>
+<%= link_to "White", about_path(color: "white"), class: "btn btn-default" %>
+<%= link_to "Blue", about_path(color: "blue"), class: "btn btn-primary" %>
+<h1>This is about me</h1>
+<p>You might learn something about me on this page.</p>
+<p>My favorite color is <%= @color %>.</p>
+
+<% if @size > 12 %>
+    <p>My shoe size is <%= @size %>. They are BIG!!</p>
+<% elsif @size < 6 %>
+<p>My show size is <%= @size %>. That's pretty small...</p>
+<% else %>
+<p>My shoe size is <%= @size %>.</p>
+<% end %>

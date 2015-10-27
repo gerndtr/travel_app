@@ -1,0 +1,24 @@
+<h1>Welcome to Roger's Travels</h1>
+<p>This is my very awesome travel site.</p>
+
+<!-- correct -->
+<%= @homeland %>
+
+<!-- incorrect -->
+<% @homeland %>
+
+<ul>
+    <% @countries.each do |country| %>
+        <li><%= country %></li>
+    <% end %>
+</ul>
+
+<% @destinations.each do |destination| %>
+  <h2><%= destination.city %></h2>
+  <h3><%= destination.country %></h3>
+  <p><%= destination.description %></p>
+<% end %>
+
+<% @travel_pics.each do |pic| %>
+  <%= image_tag pic, class: "img-responsive" %>
+<% end %>
